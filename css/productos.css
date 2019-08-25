@@ -1,0 +1,96 @@
+/* === ============== === */
+/* === productos.html === */
+/* === ============== === */
+.left_side {
+    margin: 15px 0 20px 0;
+    width: 280px;
+    height: 580px;
+    float: left;
+    background: url(../img/left_bg.png) no-repeat;
+    position:relative; 
+}
+.menu_lateral {
+   width: 208px;
+   height: 508px;
+   padding: 5px;
+   background-color: #fff;
+   border: 1px solid #b3b3b3;    
+   border-radius: 2px;
+   -moz-box-shadow: 0 0 5px #7f7f7f ;
+   -webkit-box-shadow: 0 0 5px #7f7f7f ;
+   box-shadow: 0px 0px 5px #7f7f7f;  
+}
+.menu_lateral h5, .menu_lateral h6 {
+   line-height:32px;
+   color: #4b6418;
+   position: relative;
+   cursor: pointer;
+   cursor: hand;
+}
+.menu_lateral h5:hover, .menu_lateral h6:hover {
+   -moz-text-shadow: 0 0 15px #b2cc7b ;
+   -webkit-text-shadow: 0 0 15px #b2cc7b ;
+   text-shadow: 0 0 15px #b2cc7b ;
+}
+.menu_lateral h5 span { 
+   display: block;
+   background: url(../img/arrow-point.png) 0 -8px no-repeat;
+   width: 16px;
+   height: 8px;
+   position: absolute;
+   right: 5px;
+   top: 12px;
+}
+.menu_lateral h5.active span { background: url(../img/arrow-point.png) -16px -8px no-repeat; }
+
+.menu_lat_opc { padding-left: 20px; } 
+.menu_lat_opc h6 { color: #4b6418; }
+.stich_border .menu_lateral div h6 { 
+  line-height: 30px;
+  position:relative; 
+}
+.stich_border div h6 span { 
+   display: block;
+   width: 8px;
+   height: 8px;
+   position: absolute;
+   left: -12px;
+   top: 10px;
+}
+.stich_border div h6.active span { background: url(../img/arrow-point.png) -32px -8px no-repeat; }
+.stich_border div h6.active { text-decoration: underline; }
+/*.green_ribbon {
+   width: 261px;
+   height: 35px;
+   margin-top: 30px;
+   background: url(../img/green_ribbon.png) no-repeat;
+   position: absolute;
+   z-index: 2;
+   color: #fff;
+   line-height: 35px;
+   padding-left: 30px;
+}*/
+.right_side {
+   margin: 15px 0 20px 0;
+   width: 580px;
+   height: 560px;
+   max-height: 560px;
+   float: right;
+   background-color: #fff;
+   border: 1px solid #b3b3b3;    
+   border-radius: 2px;
+   -moz-box-shadow: 0 0 5px #888888 ;
+   -webkit-box-shadow: 0 0 5px #888888 ;
+   box-shadow: 0px 0px 5px #888888;  
+   overflow: hidden;
+   padding: 10px
+}
+.right_side img{
+   float: left;
+   height: 96px;
+   width: 96px;
+   margin-right: 8px;
+   margin-bottom: 8px;
+   padding: 2px;
+}
+.right_side img:hover { border: 2px solid #b2cc7b; padding: 0;}

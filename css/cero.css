@@ -1,0 +1,312 @@
+/* === Generales === */
+.invisible { display:none; }
+@font-face {
+	 font-family: 'humanst521';
+	 src: url('../fonts/humanst521-lt-bt-light-webfont.eot');
+	 src: url('../fonts/humanst521-lt-bt-light-webfont.eot?#iefix') format('embedded-opentype'),
+			url('../fonts/humanst521-lt-bt-light-webfont.woff') format('woff'),
+			url('../fonts/humanst521-lt-bt-light-webfont.ttf') format('truetype'),
+			url('../fonts/humanst521-lt-bt-light-webfont.svg#humanst521_lt_btlight') format('svg');
+	 font-weight: normal;
+	 font-style: normal;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: humanst521,Verdana,Helvetica,sans-serif;
+	font-size: 16px;
+}
+html {
+	position:relative;
+	min-height: 100%;
+	overflow-x: hidden; /* para resoluciones de 1024x768 */
+}
+body { 
+	background: url(../img/bg.jpg) repeat;
+	margin: auto;
+	margin-bottom: 110px; /* Bottom footer height */ 
+	z-index: 10;
+}
+.body_bg_spyral {
+	width: 1071px;
+	height: 786px;
+	background: url(../img/spyral.png) no-repeat;
+	margin: auto;
+	z-index: 2;
+}
+a { text-decoration: none;}
+img { border:none; }
+
+/* === Esqueleto y contenedor === */
+.frame { 
+	width: 900px;
+	height: 790px;
+	margin: auto;
+	z-index: 20;
+}
+@media screen and (max-width: 800px) { html { overflow-x: auto; } }
+@media screen and (max-width: 1024px) { .frame { margin-left: 55px; } }
+h1 { font-size: 28px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; color:#5a376e; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+/* === Encabezado: menu y logo === */
+
+.header {
+	width: 100%;
+	height: 180px;
+	margin-top: 10px;
+}
+.logo img{ 
+	width: 220px;
+	height: 180px;
+	display: block;
+	float: left;
+	margin-left: 30px;
+}
+.nav {
+	background: url(../img/menu.png) no-repeat;
+	width: 603px;
+	height: 35px;
+	display: block;
+	float: right;
+	text-align: center;
+	vertical-align: middle;
+}
+.menu { padding-left: 40px; }
+.menu li {
+	font-size: 14px;
+	text-decoration: none;
+	list-style-type: none;
+	line-height:35px;
+	float: left;
+	position: relative;
+}
+.menu ul {
+	padding: 5px 0 ;
+	position: absolute;
+	display: none;
+	background-color: #5a376e;
+}
+.menu ul li {
+	text-align: left;
+	padding:0;
+	width: 180px;
+}
+.menu ul li a { 
+	padding-left:10px;
+	font-size: 14px;
+	line-height: 24px;
+}
+.menu a:visited {color:#fff;} 
+.menu a:hover   { background-color: #9d72b7;  background-color: rgba(157,114,189,.5); }
+.menu a,.nav_opc span {
+	color:#fff;
+	padding: 0 24px;
+	display: block;
+	line-height: 35px;
+	cursor: hand;
+	cursor: pointer; 
+}
+.nav_opc span:hover { background-color: #9d72b7; background-color: rgba(157,114,189,.5); }
+
+/* === Contenido o cuerpo === */
+
+.content {
+	width: 900px;
+	height: 594px;
+	font-size: 14px; 
+}
+.top_banner{
+	margin: 15px 0 20px 0;
+	width: 900px;
+	height: 360px;
+	clear: both;
+	background-color: #fff;
+	border: 1px solid #b3b3b3;    
+	border-radius: 2px;
+	box-shadow: 0px 0px 5px #888888; -moz-box-shadow: 0 0 5px #888888 ; -webkit-box-shadow: 0 0 5px #888888 ;
+	position: relative;
+	z-index: 1;
+}
+.rotador { 
+	width: 880px;
+	height: 340px;
+	margin: 10px;
+	overflow:hidden; 
+	z-index: 2;
+}
+.nav_rotador {
+	position:absolute;
+	z-index: 3;
+	right: 20px;
+	bottom: 20px;
+}
+.nav_rotador a {
+	width: 16px;
+	height: 16px;
+	display: block;
+	margin: 0 5px;
+	background: url('../img/arrow-point.png') 0 -16px no-repeat;
+}
+.nav_rotador a:hover { background: url('../img/arrow-point.png') -16px -16px no-repeat; }
+.nav_rotador li{
+	float:left;
+	list-style-type:none;
+}
+.bottom_square {
+	height: 301px;
+	position:absolute;
+}
+.bottom_square > div {
+	width: 281px;
+	height: 201px;
+	background-color: #fff;
+	border: 1px solid #b3b3b3;    
+	border-radius: 2px;
+	-moz-box-shadow: 0 0 5px #888888 ;
+	-webkit-box-shadow: 0 0 5px #888888 ;
+	box-shadow: 0px 0px 5px #888888;
+	position: relative;
+	float: left;    
+}
+.bs_one div {
+	width: 261px;
+	height: 31px;
+	margin: 10px;
+	background: url("../img/gold_ribbon.png") no-repeat;
+	position: absolute;
+	padding-left: 25px;
+	z-index: 2;
+	color: #fff; 
+	font-size: 20px;  
+	line-height: 30px;
+}
+.bs_two { margin: 0 25.1px 0 25.1px; }
+.bs_two div {
+	width: 261px;
+	height: 30px;
+	margin: 10px;
+	padding-top: 2px;
+	background: url("../img/purple_ribbon.png") no-repeat;
+	color: #fff;   
+	position: absolute;
+	z-index: 2;
+	line-height: 30px;
+	font-size: 20px;  
+	text-align: center;  
+}
+
+.bs_three div {
+	width: 281px;
+	height: 30px;
+	margin-top: 10px;
+	background: #b2cc7b;
+	color: #6b5c19;   
+	position: absolute;
+	z-index: 2;
+	line-height: 31px;
+	font-size: 20px;  
+	text-align: center;
+}
+.bs_one img {
+	width: 256px;
+	height: 145px;
+	margin: 48px 10px 10px 12px;
+}
+.bs_two img {
+	width: 246px;
+	height: 155px;
+	margin-top: 40px;
+	margin-left: 20px;
+}
+.bs_three img {
+	width: 126px;
+	height: 128px;
+	margin: 60px 5px 0 5px;
+}
+.stich_border {
+	width: 218px;
+	height: 518px;
+	margin: 10px;
+	border:1px dashed #fff;
+	position: absolute;
+	z-index: 3;
+	padding:20px;
+}
+.footer {
+	width: 100%;
+	height: 100px;
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	margin-top: 13px; 
+	background: url(../img/foot.png) repeat-x;
+	font-style: normal;
+}
+.footer > div {
+	width: 900px;
+	margin: auto;
+	/*margin-left: 85.5px;*/ /*este es el espacio que se deja por la espiral*/
+	padding-top: 15px;
+	padding-right: 10px;
+	line-height: 12px;
+
+}
+.footer div { color: #5a376e; }
+.footer h6 { 
+	font-family: Georgia; 
+	font-style: italic; 
+	margin-bottom: 5px;
+}
+.footer div a { font-size: 12px; }
+.footer div a:link { color: #5a376e; }
+.footer div a:visited { color: #5a376e; }
+.footer div a:hover { font-weight: bold; }
+.mapa_pedido {
+	margin-left: 7px;
+	float: left;
+	width: 120px;
+}
+.mapa_productos {
+	width: 120px;
+	padding-left: 15px;
+	float: left;
+	border-left: 1px dashed #5a376e;
+}
+.mapa_empresa {
+	width: 180px;
+	padding-left: 15px;
+	float: left;
+	border-left: 1px dashed #5a376e;
+}
+.foot_contact {
+	width: 200px;
+	float: right;
+}
+.mapa_pedido, .mapa_productos, .mapa_empresa { height: 72px; }
+.fb, .tw, .sk { float: right; } 
+
+.cont_text { 
+	display: block;
+	margin-top: 30px;
+	clear: both;
+	font-size: 12px;
+	text-align: right;
+}
+.foot_contact div a div {
+	width: 24px;
+	height: 24px;
+}
+.fb { background: url(../img/grid-button24.png) 0 0 ; }
+.fb:hover { background: url(../img/grid-button24.png) 0 -24px ; }
+.tw { 
+	margin: 0 10px;
+	background: url(../img/grid-button24.png) -72px 0 ;
+}
+.tw:hover { background: url(../img/grid-button24.png) -72px -24px ; }
+.sk { background: url(../img/grid-button24.png) -24px 0 ; }
+.sk:hover { background: url(../img/grid-button24.png) -24px -24px ; }

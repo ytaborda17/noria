@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Noria Bordados y Dise&ntilde;os</title>
+   <link type="text/css" rel="stylesheet" href="css/cero.css"/>
+   <link type="text/css" rel="stylesheet" href="css/empresa.css"/>
+   <link type="text/css" rel="stylesheet" href="css/jquery.mCustomScrollbar.css"/>
+   <link rel="icon" type="image/png" href="img/fav.png" />
+   <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+   <script src="js/jquery.mCustomScrollbar.js"></script>
+   <script type="text/javascript" src="js/noria.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){
+        $('.menu li').hover(function(){nav_in($(this));},function(){nav_out($(this));});
+     });
+   </script>
+</head>
+<body>
+   <div class="body_bg_spyral">
+      <div class="frame">
+         <div class="header">
+            <div class="logo"><a href="index.html"><img src="img/logo.png"></a> <h1 class="invisible">Noria Bordados y Dise&ntilde;os</h1></div>
+            <div class="nav">
+               <ul class="menu"> 
+                  <li class="nav_opc"><a href="index.html">Inicio</a></li>
+                  <li class="nav_opc"><span>Pedido</span>
+                     <ul>
+                        <li><a href="pedido.html">Dise&ntilde;o</a></li>
+                        <li><a href="#">Subir pedido predise&ntilde;ado</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav_opc"><span>Productos</span>
+                     <ul>
+                        <li><a href="productos.html?tab=sab">Lenceria</a></li>
+                        <li><a href="productos.html?tab=unif">Uniformes</a></li>
+                        <li><a href="productos.html?tab=grrs">Accesorios</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav_opc"><span >La Empresa</span>
+                     <ul>
+                        <li><a href="empresa.html?tab=work">Lo que hacemos</a></li>
+                        <li><a href="empresa.html?tab=mision">Misi&oacute;n y visi&oacute;n</a></li>
+                        <li><a href="empresa.html?tab=org">Organigrama</a></li>
+                        <li><a href="empresa.html?tab=terms">T&eacute;rminos y condiciones</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav_opc"><a href="contacto.html">Contacto</a></li>
+               </ul>
+            </div>
+         </div>
+            <div class="content">
+               <div class="left_side">
+                  <div class="stich_border">
+                     <div> 
+                        <h5 id="1" class="active">Lo que hacemos<span></span></h5>
+                        <h5 id="2">Misi&oacute;n y visi&oacute;n<span></span></h5>
+                        <h5 id="3">Organigrama<span></span></h5>
+                        <h5 id="4">T&eacute;rminos y condiciones<span></span></h5>
+                     </div>
+                     <script type="text/javascript">
+                        $(document).ready(function(){
+                           $(".stich_border div h5").click(function(){
+                              $(this).siblings("h5").removeClass("active");
+                              $(this).addClass("active");
+                              $('#tab'+$(this).attr('id')).siblings("div").hide();
+                              $('#tab'+$(this).attr('id')).show();
+                              $('html, body').animate({scrollTop: 200}, 1000);
+                              $(".right_side").mCustomScrollbar({
+                                 theme: "dark-thick"
+                              });
+                           });
+                           var tab = location.search.replace('?', '').split('=');
+                           if (tab[1]=="work") $('#1').trigger('click');
+                           if (tab[1]=="mision") $('#2').trigger('click');
+                           if (tab[1]=="org") $('#3').trigger('click');
+                           if (tab[1]=="terms") $('#4').trigger('click');
+                        });
+                     </script>
+                  </div>
+               </div>
+               <div class="right_side">
+                  <div id="tab1" class="text">
+                     <h3>Lo que hacemos</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                  <div id="tab2" class="text" style="display:none;">
+                     <h3>Misi&oacute;n</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                     <br/>
+                     <h3>Visi&oacute;n</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                  <div id="tab3" class="text" style="display:none;">
+                     <h3>Organigrama</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                     <br/>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+                  <div id="tab4" class="text" style="display:none;">
+                     <h3>T&eacute;rminos y condiciones</h3>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                     <br/>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                     <br/>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                     <br/>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                     <br/>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                     <br/>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  </div>
+               </div>
+            </div>    
+      </div>
+   </div>
+   <div class="footer">
+      <div>
+         <div class="mapa_pedido">
+            <h6>pedido</h6>
+            <a href="pedido.html?tab=diseno" target="_self">DISE&Ntilde;O</a><br/>
+            <a href="pedido.html?tab=subir" target="_self">SUBIR PEDIDO</a><br/>
+         </div>
+         <div class="mapa_productos">
+            <h6>productos</h6>
+            <a href="productos.html?tab=sab" target="_self">LENCERIA</a><br/>
+            <a href="productos.html?tab=unif" target="_self">UNIFORMES</a><br/>
+            <a href="productos.html?tab=grrs" target="_self">ACCESORIOS</a><br/>
+         </div>
+         <div class="mapa_empresa">
+            <h6>la empresa</h6>
+            <a href="empresa.html?tab=work" target="_self">LO QUE HACEMOS</a><br/>
+            <a href="empresa.html?tab=mision" target="_self">MISION Y VISION</a><br/>
+            <a href="empresa.html?tab=org" target="_self">ORGANIGRAMA</a><br/>
+            <a href="empresa.html?tab=terms" target="_self">TERMINOS Y CONDICIONES</a><br/>
+         </div>
+         <div class="foot_contact">
+            <div>
+               <a href="#"><div class="fb"></div></a>
+               <a href="#"><div class="tw"></div></a>
+               <a href="#"><div class="sk"></div></a>
+            </div>
+            <div class="cont_text">
+               +58 261 7556933<br/>
+               <a href="mailto:CONTACTO@NORIA.BD?Subject=Saludos%20Noria" target="_blank">CONTACTO@NORIA.BD</a><br/>
+               &copy; 2013 YENIREE TABORDA
+            </div>
+         </div>
+      </div>
+   </div>   
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Noria Bordados y Dise&ntilde;os</title>
+   <link type="text/css" rel="stylesheet" href="css/cero.css"/>
+   <link type="text/css" rel="stylesheet" href="css/pedido.css"/>
+   <link rel="stylesheet" href="css/style.css" />
+   <link rel="icon" type="image/png" href="img/fav.png" />
+   <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+   <script type="text/javascript" src="js/jquery-ui.js"></script>
+   <script type="text/javascript" src="js/noria.js"></script>
+   <script type="text/javascript">
+      $(document).ready(function(){
+         $('.menu li').hover(function(){nav_in($(this));},function(){nav_out($(this));});
+         $(".menu_lateral .menu_lat_opc").hide();
+         $(".menu_lateral h5").click(function(){
+            $(this).next(".menu_lat_opc").slideToggle("slow").siblings(".menu_lat_opc:visible").slideUp("slow");
+            $(this).toggleClass("active");
+            $(this).siblings("h5").removeClass("active");
+            $('html, body').animate({scrollTop: 200}, 1000);
+         });
+         function hexFromRGB(r, g, b) {
+            var hex = [
+               r.toString( 16 ),
+               g.toString( 16 ),
+               b.toString( 16 )
+            ];
+            $.each( hex, function( nr, val ) {
+               if ( val.length === 1 ) {
+                  hex[ nr ] = "0" + val;
+               }
+            });
+            return hex.join( "" ).toUpperCase();
+         }
+         function refreshSwatch() {
+            var red = $( "#red" ).slider( "value" ),
+               green = $( "#green" ).slider( "value" ),
+               blue = $( "#blue" ).slider( "value" ),
+               hex = hexFromRGB( red, green, blue );
+            $( "#color_tela" ).css( "background-color", "#" + hex );
+         }
+         $(function() {
+            $( "#red, #green, #blue" ).slider({
+               orientation: "horizontal",
+               range: "min",
+               max: 255,
+               value: 127,
+               slide: refreshSwatch,
+               change: refreshSwatch
+            });
+            $( "#red" ).slider( "value" , 125);
+            $( "#green" ).slider("value",0);
+            $( "#blue" ).slider("value", 55);
+         });
+      });
+   </script>
+</head>
+<body>
+   <div class="body_bg_spyral">
+      <div class="frame">
+         <div class="header">
+            <div class="logo"><a href="index.html"><img src="img/logo.png"></a> <h1 class="invisible">Noria Bordados y Dise&ntilde;os</h1></div>
+            <div class="nav">
+               <ul class="menu"> 
+                  <li class="nav_opc"><a href="index.html">Inicio</a></li>
+                  <li class="nav_opc"><span>Pedido</span>
+                     <ul>
+                        <li><a href="pedido.html">Dise&ntilde;o</a></li>
+                        <li><a href="#">Subir pedido predise&ntilde;ado</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav_opc"><span>Productos</span>
+                     <ul>
+                        <li><a href="productos.html?tab=sab">Lenceria</a></li>
+                        <li><a href="productos.html?tab=unif">Uniformes</a></li>
+                        <li><a href="productos.html?tab=grrs">Accesorios</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav_opc"><span >La Empresa</span>
+                     <ul>
+                        <li><a href="empresa.html?tab=work">Lo que hacemos</a></li>
+                        <li><a href="empresa.html?tab=mision">Misi&oacute;n y visi&oacute;n</a></li>
+                        <li><a href="empresa.html?tab=org">Organigrama</a></li>
+                        <li><a href="empresa.html?tab=terms">T&eacute;rminos y condiciones</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav_opc"><a href="contacto.html">Contacto</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="content">
+            <form>
+               <div class="left_side">
+                  <div class="stich_border">
+                     <div class="menu_lateral">
+                        <h5>Tipo de tela<span></span></h5>
+                        <div  class="menu_lat_opc">
+                           <label><input type="radio" id="camisa" name="tipo_tela">Camisa</label><br/>
+                           <label><input type="radio" id="chemisse" name="tipo_tela">Chemisse</label><br/>
+                           <label><input type="radio" id="impermeable" name="tipo_tela">Impermeable</label><br/>
+                        </div>
+                        <h5>Color de la tela<span></span></h5>
+                        <div class="menu_lat_opc">
+                           <div id="red"></div><br/>
+                           <div id="green"></div><br/>
+                           <div id="blue"></div><br/>
+                        </div>
+                        <h5>Tipo de prenda<span></span></h5>
+                        <div class="menu_lat_opc">
+                           <div>
+                              <div class="prenda" id="prenda1"><img src="img/prendas/camisa-hombre.png"></div>
+                              <div class="prenda" id="prenda2"><img src="img/prendas/chemise-mujer.png"></div>
+                              <div class="prenda" id="prenda3"><img src="img/prendas/franela-hombre.png"></div>
+                              <div class="prenda" id="prenda4"><img src="img/prendas/franela-mujer.png"></div>
+                           </div>
+                        </div>
+                        <h5>Tama&ntilde;o del bordado<span></span></h5>
+                        <div class="menu_lat_opc">
+                           <table width="95%">
+                              <tr>
+                                 <td width="100px" align="left">Ancho (cm): </td>
+                                 <td width="100px" align="left"><input type="text" width="30%" maxlength="8" size="8" class="input_text"></td>
+                              </tr>
+                              <tr>
+                                 <td align="left">Alto (cm): </td>
+                                 <td align="left"><input type="text" maxlength="8" size="8" class="input_text"></td>
+                              </tr>
+                           </table>
+                        </div>
+                        <h5>Cargar imagen del bordado<span></span></h5>
+                        <div class="menu_lat_opc">
+                           <table width="95%">
+                              <tr>
+                                 <td width="200px" align="left">Direcci&oacute;n web (url): </td>
+                              </tr>
+                              <tr>
+                                 <td align="left"><input id="bordado" type="text" size="20" class="input_text"></td>
+                              </tr>
+                           </table>
+                        </div>
+                        <!-- <h5>Subir pedido<span></span></h5> -->
+                        <script type="text/javascript">
+                           $(document).ready(function(){
+                              $('.prenda').click(function (){
+                                 var img_location = $('#'+$(this).attr('id')+' img').attr('src');
+                                 $('#prenda').css('background-image','url('+img_location+')');
+                              });
+
+                              $('#bordado').focusout(function(){
+                                 // https://www.google.com/intl/de/images/logos/chrome_logo.gif
+                                 $('#ubicacion_bordado').attr('src',$(this).val());
+                              });
+                           });
+                        </script>
+                     </div>
+                  </div>
+               </div>
+            </form>
+            <div class="right_side">
+               <div class="vista_previa">
+                  <div class="beige_ribbon"><h4>Vista preliminar</h4></div>
+                  <div id="color_tela"></div>
+                  <div id="prenda"><img src="" id="ubicacion_bordado"></div>
+               </div>
+               <div class="detalles_pedido">
+                  <div class="beige_ribbon"><h4>Detalles del pedido</h4></div>
+                  <table width="100%" style="margin-top:60px;">
+                     <tr>
+                        <td width="100px" align="left">Tipo de tela: </td>
+                        <td width="200px" id="det_tipo-tela"></td>
+                     </tr>
+                     <tr>
+                        <td width="100px" align="left">Color tela: </td>
+                        <td width="200px" id="det_tipo-tela"><div style="height:14px;width:60px;border1px solid #ccc"></div></td>
+                     </tr>
+                     <tr>
+                        <td width="100px" align="left">Color tela: </td>
+                        <td width="200px" id="det_tipo-tela"><div style="height:14px;width:60px;border1px solid #ccc"></div></td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+         </div>    
+      </div>
+   </div>
+   <div class="footer">
+      <div>
+         <div class="mapa_pedido">
+            <h6>pedido</h6>
+            <a href="pedido.html?tab=diseno" target="_self">DISE&Ntilde;O</a><br/>
+            <a href="pedido.html?tab=subir" target="_self">SUBIR PEDIDO</a><br/>
+         </div>
+         <div class="mapa_productos">
+            <h6>productos</h6>
+            <a href="productos.html?tab=sab" target="_self">LENCERIA</a><br/>
+            <a href="productos.html?tab=unif" target="_self">UNIFORMES</a><br/>
+            <a href="productos.html?tab=grrs" target="_self">ACCESORIOS</a><br/>
+         </div>
+         <div class="mapa_empresa">
+            <h6>la empresa</h6>
+            <a href="empresa.html?tab=work" target="_self">LO QUE HACEMOS</a><br/>
+            <a href="empresa.html?tab=mision" target="_self">MISION Y VISION</a><br/>
+            <a href="empresa.html?tab=org" target="_self">ORGANIGRAMA</a><br/>
+            <a href="empresa.html?tab=terms" target="_self">TERMINOS Y CONDICIONES</a><br/>
+         </div>
+         <div class="foot_contact">
+            <div>
+               <a href="#"><div class="fb"></div></a>
+               <a href="#"><div class="tw"></div></a>
+               <a href="#"><div class="sk"></div></a>
+            </div>
+            <div class="cont_text">
+               +58 261 7556933<br/>
+               <a href="mailto:CONTACTO@NORIA.BD?Subject=Saludos%20Noria" target="_blank">CONTACTO@NORIA.BD</a><br/>
+               &copy; 2013 YENIREE TABORDA
+            </div>
+         </div>
+      </div>
+   </div>  
+</body>
+</html>

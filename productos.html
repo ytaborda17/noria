@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Noria Bordados y Dise&ntilde;os</title>
+   <link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox.css">
+   <link rel="stylesheet" href="js/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+   <link type="text/css" rel="stylesheet" href="css/cero.css"/>
+   <link type="text/css" rel="stylesheet" href="css/productos.css"/>
+   <link rel="icon" type="image/png" href="img/fav.png" />
+
+   <link rel="stylesheet" href="js/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.5" type="text/css" media="screen" />
+   <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+   <script src="js/jquery.mCustomScrollbar.js"></script>
+   <script type="text/javascript" src="js/jquery-1.7.js"></script>
+   <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+   <!--<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>-->
+   <script type="text/javascript" src="js/fancybox/jquery.fancybox.js"></script>
+   <script type="text/javascript" src="js/noria.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){
+         $('.menu li').hover(function(){nav_in($(this));},function(){nav_out($(this));});
+         $(".fancyclick").fancybox({
+            helpers : {
+               overlay : { css : { 'background' : 'rgba(179, 179, 179, 0.65)' } },
+               thumbs   : {
+                  width : 50,
+                  height   : 50
+               },
+            },
+            padding : 0, // sin borde blanco
+            nextEffect  : 'fade',
+            prevEffect  : 'fade',
+         });
+         $(".menu_lateral .menu_lat_opc").hide();
+         $(".menu_lateral h5").click(function(){
+            $(this).next(".menu_lat_opc").slideToggle("slow").siblings(".menu_lat_opc:visible").slideUp("slow");
+            $(this).toggleClass("active");
+            $(this).siblings("h5").removeClass("active");
+         });
+         var tab = location.search.replace('?', '').split('=');
+         $(".stich_border div h6").click(function(){
+            var obj='.tab_'+$(this).attr('catg')+'-'+$(this).attr('id');
+            $("h6").removeClass("active");
+            $(this).addClass("active");
+            $('[class^=tab_]').hide();
+            $(obj).show();
+            $('html, body').animate({scrollTop: 200}, 1000);
+            // $(obj+" .fancyclick").eq(0).trigger('click');
+         });
+         $('#'+tab[1]).trigger('click');
+         // $(".right_side").mCustomScrollbar({ theme: "dark-thick" });
+     });
+   </script>
+</head>
+
+<body>
+   <div class="body_bg_spyral">
+      <div class="frame">
+         <div class="header">
+            <div class="logo"><a href="index.html"><img src="img/logo.png"></a> <h1 class="invisible">Noria Bordados y Dise&ntilde;os</h1></div>
+            <div class="nav">
+               <ul class="menu"> 
+                  <li class="nav_opc"><a href="index.html">Inicio</a></li>
+                  <li class="nav_opc"><span>Pedido</span>
+                     <ul>
+                        <li><a href="pedido.html">Dise&ntilde;o</a></li>
+                        <li><a href="#">Subir pedido predise&ntilde;ado</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav_opc"><span>Productos</span>
+                     <ul>
+                        <li><a href="productos.html?tab=sab">Lenceria</a></li>
+                        <li><a href="productos.html?tab=unif">Uniformes</a></li>
+                        <li><a href="productos.html?tab=grrs">Accesorios</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav_opc"><span >La Empresa</span>
+                     <ul>
+                        <li><a href="empresa.html?tab=work">Lo que hacemos</a></li>
+                        <li><a href="empresa.html?tab=mision">Misi&oacute;n y visi&oacute;n</a></li>
+                        <li><a href="empresa.html?tab=org">Organigrama</a></li>
+                        <li><a href="empresa.html?tab=terms">T&eacute;rminos y condiciones</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav_opc"><a href="contacto.html">Contacto</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="content">
+            <div class="left_side">
+               <!-- <div class="green_ribbon"><h3>Hola mundo!</h3></div> -->
+               <div class="stich_border">
+                  <div class="menu_lateral">
+                     <h5>Lenceria<span></span></h5>
+                     <div  class="menu_lat_opc">
+                        <h6 catg="lenc" id="sab">S&aacute;banas<span></span></h6>
+                        <h6 catg="lenc" id="tlls">Toallas<span></span></h6>
+                     </div>
+                     <h5>Uniformes<span></span></h5>
+                     <div class="menu_lat_opc">
+                        <h6 catg="unif" id="unif">Uniformes<span></span></h6>
+                     </div>
+                     <h5>Accesorios<span></span></h5>
+                     <div class="menu_lat_opc">
+                        <h6 catg="acce" id="grrs">Gorras y sombreros<span></span></h6>
+                        <h6 catg="acce" id="cart">Carteras<span></span></h6>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="right_side">
+               <div class="tab_lenc-sab">
+                  <a rel="sabanas" class="fancyclick" href="img/pic/products/lenceria-sabanas-01.jpg"><img src="img/pic/products/lenceria-sabanas-01.jpg"></a>
+                  <a rel="sabanas" class="fancyclick" href="img/pic/products/lenceria-sabanas-02.jpg"><img src="img/pic/products/lenceria-sabanas-02.jpg"></a>
+                  <a rel="sabanas" class="fancyclick" href="img/pic/products/lenceria-sabanas-03.jpg"><img src="img/pic/products/lenceria-sabanas-03.jpg"></a>
+               </div>
+
+
+               <div class="tab_unif-unif">
+                  <a rel="uniformes" class="fancyclick" href="img/pic/products/uniformes-uniformes-01.jpg"><img src="img/pic/products/uniformes-uniformes-01.jpg"></a>
+                  <a rel="uniformes" class="fancyclick" href="img/pic/products/uniformes-uniformes-02.jpg"><img src="img/pic/products/uniformes-uniformes-02.jpg"></a>
+                  <a rel="uniformes" class="fancyclick" href="img/pic/products/uniformes-uniformes-05.jpg"><img src="img/pic/products/uniformes-uniformes-05.jpg"></a>
+               </div>
+                <div class="tab_acce-grrs">
+                  <a rel="gorras" class="fancyclick" href="img/pic/products/accesorios-gorras-01.jpg"><img src="img/pic/products/accesorios-gorras-01.jpg"></a>
+                  <a rel="gorras" class="fancyclick" href="img/pic/products/accesorios-gorras-02.jpg"><img src="img/pic/products/accesorios-gorras-02.jpg"></a>
+                  <a rel="gorras" class="fancyclick" href="img/pic/products/accesorios-gorras-03.jpg"><img src="img/pic/products/accesorios-gorras-03.jpg"></a>
+                  <a rel="gorras" class="fancyclick" href="img/pic/products/accesorios-gorras-04.jpg"><img src="img/pic/products/accesorios-gorras-04.jpg"></a>
+               </div>
+               <div class="tab_acce-cart">
+                  <a rel="carteras" class="fancyclick" href="img/pic/products/accesorios-carteras-01.jpg"><img src="img/pic/products/accesorios-carteras-01.jpg"></a>
+                  <a rel="carteras" class="fancyclick" href="img/pic/products/accesorios-carteras-02.jpg"><img src="img/pic/products/accesorios-carteras-02.jpg"></a>
+                  <a rel="carteras" class="fancyclick" href="img/pic/products/accesorios-carteras-03.jpg"><img src="img/pic/products/accesorios-carteras-03.jpg"></a>
+                  <a rel="carteras" class="fancyclick" href="img/pic/products/accesorios-carteras-04.jpg"><img src="img/pic/products/accesorios-carteras-04.jpg"></a>
+                  <a rel="carteras" class="fancyclick" href="img/pic/products/accesorios-carteras-06.jpg"><img src="img/pic/products/accesorios-carteras-05.jpg"></a>
+               </div> 
+            </div>
+         </div>    
+      </div>
+   </div>
+   <div class="footer">
+      <div>
+         <div class="mapa_pedido">
+            <h6>pedido</h6>
+            <a href="pedido.html?tab=diseno" target="_self">DISE&Ntilde;O</a><br/>
+            <a href="pedido.html?tab=subir" target="_self">SUBIR PEDIDO</a><br/>
+         </div>
+         <div class="mapa_productos">
+            <h6>productos</h6>
+            <a href="productos.html?tab=sab" target="_self">LENCERIA</a><br/>
+            <a href="productos.html?tab=unif" target="_self">UNIFORMES</a><br/>
+            <a href="productos.html?tab=grrs" target="_self">ACCESORIOS</a><br/>
+         </div>
+         <div class="mapa_empresa">
+            <h6>la empresa</h6>
+            <a href="empresa.html?tab=work" target="_self">LO QUE HACEMOS</a><br/>
+            <a href="empresa.html?tab=mision" target="_self">MISION Y VISION</a><br/>
+            <a href="empresa.html?tab=org" target="_self">ORGANIGRAMA</a><br/>
+            <a href="empresa.html?tab=terms" target="_self">TERMINOS Y CONDICIONES</a><br/>
+         </div>
+         <div class="foot_contact">
+            <div>
+               <a href="#"><div class="fb"></div></a>
+               <a href="#"><div class="tw"></div></a>
+               <a href="#"><div class="sk"></div></a>
+            </div>
+            <div class="cont_text">
+               +58 261 7556933<br/>
+               <a href="mailto:CONTACTO@NORIA.BD?Subject=Saludos%20Noria" target="_blank">CONTACTO@NORIA.BD</a><br/>
+               &copy; 2013 YENIREE TABORDA
+            </div>
+         </div>
+      </div>
+   </div>    
+</body>
+</html>

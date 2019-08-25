@@ -1,0 +1,108 @@
+.left_side {
+   margin: 15px 0 20px 0;
+   width: 280px;
+   height: 580px;
+   float: left;
+   background: url(../img/left_bg.png) no-repeat;
+   position:relative; 
+}
+.left_side p { font-size: 14px; }
+
+.tweet_bg {
+   width: 208px;
+   height: 508px;
+   padding: 5px;
+   background-color: #fff;
+   border: 1px solid #b3b3b3;    
+   border-radius: 2px;
+   -moz-box-shadow: 0 0 5px #7f7f7f ;
+   -webkit-box-shadow: 0 0 5px #7f7f7f ;
+   box-shadow: 0px 0px 5px #7f7f7f;  
+   position: relative;
+}
+.tweet_header {
+   width: 100px;
+   height: 32px;
+   background: #fff;
+   display: block;
+   float: left;
+   position: absolute;
+   z-index: 999;
+   line-height: 32px;
+   color: #5a376e;
+   font-weight: bold;
+}
+.tweet_header h4 { 
+   margin-left: 40px; 
+   font-size: 16px;
+}
+.tweet_icon {
+   width: 32px;
+   height: 32px;
+   background: url(../img/grid-button32.png) -96px 0 ; 
+}
+.right_side {
+   margin: 15px 0 20px 0;
+   width: 600px;
+   height: 580px;
+   float: right;
+   position: relative;
+   background-color: #fff;
+   border: 1px solid #b3b3b3;    
+   border-radius: 2px;
+   -moz-box-shadow: 0 0 5px #888 ;
+   -webkit-box-shadow: 0 0 5px #888 ;
+   box-shadow: 0px 0px 5px #888888;  
+}
+.right_content{
+   margin: 10px;
+   width: 100%;
+   height: 100%;
+}
+.phone_icon {
+   width: 32px;
+   height: 32px;
+   background: url(../img/grid-button32.png) -128px 0 ; 
+   float: left;
+}
+.mail_icon {
+   width: 32px;
+   height: 32px;
+   background: url(../img/grid-button32.png) -160px 0 ; 
+   float: left;
+}
+.dir_icon {
+   width: 28px;
+   height: 32px;
+   background: url(../img/grid-button32.png) -192px 0 ; 
+   float: left;
+}
+.text {
+   float: left;
+   margin: 0 30px 25px 10px;
+   text-align: justify;
+}
+.text h3 { line-height: 32px; }
+.text input,textarea { 
+   border: 1px solid #ccc; 
+   font-size: 14px;
+}
+textarea { 
+   max-width: 320px;
+   max-height: 200px;
+}
+.button {
+   width: 80px;
+   height: 26px;
+   border:none;
+   background: #5a376e;
+   color: #fff;
+   font-size: 14px;
+   /*margin-right: 33px;*/
+   line-height: 30px;
+   text-align: center;
+}
+.button:hover { 
+   background: #9d72b7; 
+   cursor: pointer;
+}

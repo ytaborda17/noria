@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Noria Bordados y Dise&ntilde;os</title>
+	<link type="text/css" rel="stylesheet" href="css/cero.css"/>
+	<link type="text/css" rel="stylesheet" href="css/jquery.mCustomScrollbar.css"/>
+	<link rel="icon" type="image/png" href="img/fav.png" />
+	<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.js"></script>
+	<script type="text/javascript" src="js/jquery-1.7.js"></script>
+	<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+	<script src="js/jquery.mCustomScrollbar.js"></script>
+	<script type="text/javascript" src="js/noria.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.menu li').hover(function(){nav_in($(this));},function(){nav_out($(this));});
+			$('.rotador').cycle({ 
+				fx:     'scrollLeft', 
+				speed:  1000, 
+				timeout: 5000, 
+				pager:  '.nav_rotador',
+				pagerAnchorBuilder: function(idx, slide) { 
+					return '<li><a href="#"><span class="invisible">' + idx + '</span></a></li>'; 
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="body_bg_spyral">
+		<div class="frame">
+			<div class="header">
+				<div class="logo"><a href="index.html"><img src="img/logo.png"></a> <h1 class="invisible">Noria Bordados y Dise&ntilde;os</h1></div>
+				<div class="nav">
+					<ul class="menu"> 
+						<li class="nav_opc"><a href="index.html">Inicio</a></li>
+						<li class="nav_opc"><span>Pedido</span>
+							<ul>
+								<li><a href="pedido.html">Dise&ntilde;o</a></li>
+								<li><a href="#">Subir pedido predise&ntilde;ado</a></li>
+							</ul>
+						</li>
+						<li class="nav_opc"><span>Productos</span>
+							<ul>
+								<li><a href="productos.html?tab=sab">Lenceria</a></li>
+								<li><a href="productos.html?tab=unif">Uniformes</a></li>
+								<li><a href="productos.html?tab=grrs">Accesorios</a></li>
+							</ul>
+						</li>
+						<li class="nav_opc"><span >La Empresa</span>
+							<ul>
+								<li><a href="empresa.html?tab=work">Lo que hacemos</a></li>
+								<li><a href="empresa.html?tab=mision">Misi&oacute;n y visi&oacute;n</a></li>
+								<li><a href="empresa.html?tab=org">Organigrama</a></li>
+								<li><a href="empresa.html?tab=terms">T&eacute;rminos y condiciones</a></li>
+							</ul>
+						</li>
+						<li class="nav_opc"><a href="contacto.html">Contacto</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="content">
+				<div class="top_banner">
+					<div class="rotador">
+						<img src="img/pic/cero-top-01.png">
+						<img src="img/pic/cero-top-02.png">
+						<img src="img/pic/cero-top-03.png">
+					</div>
+					<div class="nav_rotador"></div>
+				</div>
+				<div class="bottom_square">
+					<div class="bs_one">
+						<div>LENCERIA</div>
+						<a href="productos.html?tab=sab"><img src="img/pic/contemporary-sheets.jpg" /></a>
+					</div>
+					<div class="bs_two">
+						<div><h5>UNIFORMES</h5></div>
+						<a href="productos.html?tab=unif"><img src="img/pic/uniforms.jpg" /></a>
+					</div>
+					<div class="bs_three">
+						<div>ACCESORIOS</div>
+						<a href="productos.html?tab=grrs"><img src="img/pic/accesorios-gorras-01.jpg" /></a>
+						<a href="productos.html?tab=cart"><img src="img/pic/accesorios-carteras-01.jpg" /></a>
+					</div>
+				</div>
+			</div>    
+		</div>
+	</div>
+	<div class="footer">
+		<div>
+			<div class="mapa_pedido">
+				<h6>pedido</h6>
+				<a href="pedido.html?tab=diseno" target="_self">DISE&Ntilde;O</a><br/>
+				<a href="pedido.html?tab=subir" target="_self">SUBIR PEDIDO</a><br/>
+			</div>
+			<div class="mapa_productos">
+				<h6>productos</h6>
+				<a href="productos.html?tab=sab" target="_self">LENCERIA</a><br/>
+				<a href="productos.html?tab=unif" target="_self">UNIFORMES</a><br/>
+				<a href="productos.html?tab=grrs" target="_self">ACCESORIOS</a><br/>
+			</div>
+			<div class="mapa_empresa">
+				<h6>la empresa</h6>
+				<a href="empresa.html?tab=work" target="_self">LO QUE HACEMOS</a><br/>
+				<a href="empresa.html?tab=mision" target="_self">MISION Y VISION</a><br/>
+				<a href="empresa.html?tab=org" target="_self">ORGANIGRAMA</a><br/>
+				<a href="empresa.html?tab=terms" target="_self">TERMINOS Y CONDICIONES</a><br/>
+			</div>
+			<div class="foot_contact">
+				<div>
+					<a href="#"><div class="fb"></div></a>
+					<a href="#"><div class="tw"></div></a>
+					<a href="#"><div class="sk"></div></a>
+				</div>
+				<div class="cont_text">
+					+58 261 7556933<br/>
+					<a href="mailto:CONTACTO@NORIA.BD?Subject=Saludos%20Noria" target="_blank">CONTACTO@NORIA.BD</a><br/>
+					&copy; 2013 YENIREE TABORDA
+				</div>
+			</div>
+		</div>
+	</div>    
+</body>
+
+</html>

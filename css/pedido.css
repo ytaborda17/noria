@@ -1,0 +1,151 @@
+.left_side {
+   margin: 15px 0 20px 0;
+   width: 280px;
+   height: 580px;
+   float: left;
+   background: url(../img/left_bg.png) no-repeat;
+   position:relative; 
+}
+
+.menu_lateral {
+   width: 208px;
+   height: 508px;
+   padding: 5px;
+   background-color: #fff;
+   border: 1px solid #b3b3b3;    
+   border-radius: 2px;
+   -moz-box-shadow: 0 0 5px #7f7f7f ;
+   -webkit-box-shadow: 0 0 5px #7f7f7f ;
+   box-shadow: 0px 0px 5px #7f7f7f;  
+}
+.menu_lateral h5 {
+   line-height:32px;
+   color: #6b5c19;
+   position: relative;
+}
+.menu_lateral h5:hover {
+   -moz-text-shadow: 0 0 15px #d2c795 ;
+   -webkit-text-shadow: 0 0 15px #d2c795 ;
+   text-shadow: 0 0 15px #d2c795 ;
+   cursor:pointer;
+   cursor: hand;
+}
+.menu_lateral h5 span { 
+   display: block;
+   background: url(../img/arrow-point.png) 0 0 no-repeat;
+   width: 16px;
+   height: 8px;
+   position: absolute;
+   right: 5px;
+   top: 12px;
+}
+.menu_lateral h5.active span { background: url(../img/arrow-point.png) -16px 0 no-repeat; }
+.menu_lateral .menu_lat_opc label{ /* el contenido */
+   color: #000;
+   line-height: 1.5;
+}
+.menu_lat_opc { padding-left: 10px; }
+#red, #green, #blue {
+   display: block;
+   float: left;
+   clear: left;
+   width: 170px;
+   height: 10px;
+}
+#red .ui-slider-range { background: #ef2929; }
+#red .ui-slider-handle { border-color: #ef2929; }
+#green .ui-slider-range { background: #6bb100; }
+#green .ui-slider-handle { border-color: #6bb100; }
+#blue .ui-slider-range { background: #2b72e5; }
+#blue .ui-slider-handle { border-color: #2b72e5; }
+.input_text { border:1px solid #d2c795;}
+.right_side {
+   margin: 15px 0 20px 0;
+   width: 600px;
+   height: 580px;
+   float: right;
+   position: relative;
+}
+.vista_previa {
+   width: 100%;
+   height: 280px;
+   margin-bottom: 18px;
+   float: left;
+   background-color: #fff;
+   border: 1px solid #b3b3b3;    
+   border-radius: 2px;
+   -moz-box-shadow: 0 0 5px #888888 ;
+   -webkit-box-shadow: 0 0 5px #888888 ;
+   box-shadow: 0px 0px 5px #888888;  
+   position: relative;
+}
+#color_tela {
+   width: 215px;
+   height: 215px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin:-90px 0 0 -110px;
+   background-image: none;
+}
+.menu_lat_opc > div {
+   width: 180px;
+   height: 120px;
+}
+.menu_lat_opc > div > div { cursor: pointer; cursor: hand;}
+.prenda {
+   display:block;
+   float: left;
+   width: 60px;
+   height: 60px;
+   /*border: 1px solid blue;*/
+}
+.prenda img{
+   margin: 5px;
+   width: 50px;
+   height: 50px;
+}
+.prenda img:hover { box-shadow:  0 0 60px #d2c795 inset;}
+#prenda {
+   width: 220px;
+   height: 220px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin:-90px 0 0 -110px;
+   background: url(../img/prendas/camisa-hombre.png) no-repeat;
+   border: 3px solid #fff;
+   position: relative;
+}
+#ubicacion_bordado {
+   width: 20px;
+   height: 20px;
+   position: absolute;;
+   left:125px;
+   top:63px;
+   z-index: 20;
+}
+.detalles_pedido {
+   width: 600px;
+   height: 280px;
+   float: left;
+   background-color: #fff;
+   border: 1px solid #b3b3b3;    
+   border-radius: 2px;
+   -moz-box-shadow: 0 0 5px #888888 ;
+   -webkit-box-shadow: 0 0 5px #888888 ;
+   box-shadow: 0px 0px 5px #888888;  
+   position: relative;
+}
+.beige_ribbon {
+   width: 261px;
+   height: 30px;
+   margin-top: 10px;
+   background: url(../img/beige_ribbon.png) no-repeat;
+   position: absolute;
+   z-index: 2;
+   line-height: 30px;
+   padding-left: 10px;
+   color: #6b5c19;
+   bac
+}

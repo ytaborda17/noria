@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+   <title>Noria Bordados y Dise&ntilde;os</title>
+   <link type="text/css" rel="stylesheet" href="css/cero.css"/>
+   <link type="text/css" rel="stylesheet" href="css/contacto.css"/>
+   <link rel="icon" type="image/png" href="img/fav.png" />
+   <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+   <script type="text/javascript" src="js/noria.js"></script>
+   <script type="text/javascript">
+      $(document).ready(function(){
+         $('.menu li').hover(function(){nav_in($(this));},function(){nav_out($(this));});
+         $('#bttn').click(function(){
+            var nombre = $('#nom').val(),
+               telefono = $('#tel').val(),
+               mensaje = $('#msg').val();
+            if (!$.trim(nombre) || !$.trim(telefono) || !$.trim(mensaje)) alert('Por favor, confirme que los datos para enviar el email esten completos.');
+            else {
+               $('#nom').val('');
+               $('#tel').val('');
+               $('#msg').val('');
+            };
+         });
+         $('html, body').animate({scrollTop: 200}, 1000);
+      });
+   </script>
+</head>
+<body>
+   <div class="body_bg_spyral">
+      <div class="frame">
+         <div class="header">
+            <div class="logo"><a href="index.html"><img src="img/logo.png"></a> <h1 class="invisible">Noria Bordados y Dise&ntilde;os</h1></div>
+            <div class="nav">
+               <ul class="menu"> 
+                  <li class="nav_opc"><a href="index.html">Inicio</a></li>
+                  <li class="nav_opc"><span>Pedido</span>
+                     <ul>
+                        <li><a href="pedido.html">Dise&ntilde;o</a></li>
+                        <li><a href="#">Subir pedido predise&ntilde;ado</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav_opc"><span>Productos</span>
+                     <ul>
+                        <li><a href="productos.html?tab=sab">Lenceria</a></li>
+                        <li><a href="productos.html?tab=unif">Uniformes</a></li>
+                        <li><a href="productos.html?tab=grrs">Accesorios</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav_opc"><span >La Empresa</span>
+                     <ul>
+                        <li><a href="empresa.html?tab=work">Lo que hacemos</a></li>
+                        <li><a href="empresa.html?tab=mision">Misi&oacute;n y visi&oacute;n</a></li>
+                        <li><a href="empresa.html?tab=org">Organigrama</a></li>
+                        <li><a href="empresa.html?tab=terms">T&eacute;rminos y condiciones</a></li>
+                     </ul>
+                  </li>
+                  <li class="nav_opc"><a href="contacto.html">Contacto</a></li>
+               </ul>
+            </div>
+         </div>
+            <div class="content">
+               <div class="left_side">
+                  <div class="stich_border">
+                     <div class="tweet_bg"> 
+                        <a href="https://twitter.com/YTaborda17" targer="_blank"><div class="tweet_header"><div class="tweet_icon"><h4>Tweets</h4></div></div></a>
+                        <script type="text/javascript">
+                           $(document).ready(function(){
+                              $('.tweet_header').hover(function(){
+                                 $('.tweet_icon').css('background-position','-96px -32px');
+                                 $('.tweet_icon h4').css('color','#9d72b7');
+                              },function(){
+                                 $('.tweet_icon').css('background-position','-96px 0');
+                                 $('.tweet_icon h4').css('color','#5a376e');
+                              });
+                           });
+                        </script>
+                        <a class="twitter-timeline" height="510" href="https://twitter.com/YTaborda17" data-widget-id="381461163554258944" data-chrome="transparent noscrollbar nofooter noborders" >Twts</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                     </div>
+                  </div>
+               </div>
+               <div class="right_side">
+                  <div class="right_content">
+                     <div style="clear:both;">
+                        <div class="phone_icon"></div>
+                        <div class="text">
+                           <h3>Tel&eacute;fonos</h3>
+                           <p>+58 261 755 5555<br/>
+                              +58 261 755 5555</p>
+                        </div>
+                     </div>
+                     <div style="clear:both;">
+                        <div class="mail_icon"></div>
+                        <div class="text">
+                           <h3>Correo</h3>
+                           <form>
+                              <table border="0" width="100%">
+                                 <tr>
+                                    <td align="left" width="150px">Nombre y apellido: </td>
+                                    <td align="left" width="370px"><input type="text" id="nom" width="90%" size="30" maxlenght="30"></td>
+                                 </tr>
+                                 <tr>
+                                    <td align="left" width="150px">Tel&eacute;fono: </td>
+                                    <td align="left" width="370px"><input type="text" id="tel" width="90%" size="30" maxlenght="30"></td>
+                                 </tr>
+                                 <tr>
+                                    <td align="left" width="150px">Mensaje: </td>
+                                    <td align="left" width="370px"><textarea id="msg" rows="3" cols="40"></textarea></td>
+                                 </tr>
+                                 <tr><td></td><td colspan="2" align="left"><div class="button" id="bttn">ENVIAR</div></td></tr>
+                                 <tr><td colspan="2"></td></tr>
+                              </table>
+                           <!-- <p>contacto_clientes@noriabd.com</p> -->
+                           </form>
+                        </div>
+                     </div>
+                     <div style="clear:both;">
+                        <div class="dir_icon"></div>
+                        <div class="text">
+                           <h3>Direcci&oacute;n</h3>
+                           <p>Sector Manzana Verde, C. Fresa con Av. Durazno, Edificio Las Frutas, Local #12</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>    
+      </div>
+   </div>
+   <div class="footer">
+      <div>
+         <div class="mapa_pedido">
+            <h6>pedido</h6>
+            <a href="pedido.html?tab=diseno" target="_self">DISE&Ntilde;O</a><br/>
+            <a href="pedido.html?tab=subir" target="_self">SUBIR PEDIDO</a><br/>
+         </div>
+         <div class="mapa_productos">
+            <h6>productos</h6>
+            <a href="productos.html?tab=sab" target="_self">LENCERIA</a><br/>
+            <a href="productos.html?tab=unif" target="_self">UNIFORMES</a><br/>
+            <a href="productos.html?tab=grrs" target="_self">ACCESORIOS</a><br/>
+         </div>
+         <div class="mapa_empresa">
+            <h6>la empresa</h6>
+            <a href="empresa.html?tab=work" target="_self">LO QUE HACEMOS</a><br/>
+            <a href="empresa.html?tab=mision" target="_self">MISION Y VISION</a><br/>
+            <a href="empresa.html?tab=org" target="_self">ORGANIGRAMA</a><br/>
+            <a href="empresa.html?tab=terms" target="_self">TERMINOS Y CONDICIONES</a><br/>
+         </div>
+         <div class="foot_contact">
+            <div>
+               <a href="#"><div class="fb"></div></a>
+               <a href="#"><div class="tw"></div></a>
+               <a href="#"><div class="sk"></div></a>
+            </div>
+            <div class="cont_text">
+               +58 261 7556933<br/>
+               <a href="mailto:CONTACTO@NORIA.BD?Subject=Saludos%20Noria" target="_blank">CONTACTO@NORIA.BD</a><br/>
+               &copy; 2013 YENIREE TABORDA
+            </div>
+         </div>
+      </div>
+   </div>   
+</body>
+
+</html>
